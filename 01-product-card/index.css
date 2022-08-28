@@ -14,7 +14,7 @@ html,
 body {
   min-height: 100%;
   width: 100%;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background: #e5e5e5;
 }
 
@@ -25,15 +25,6 @@ button {
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
-}
-
-a,
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
 }
 
 ul li {
@@ -155,14 +146,16 @@ h6 {
   margin-top: 24px;
   height: 48px;
 }
-.cards-item__content-btn:hover {
+
+.cards-item__content-btn.default:hover  {
   color: #ffffff;
   background: #42940f;
 }
 
-.cards-item__content-btn:active {
+.cards-item__content-btn.default:active {
   background: #1f5200;
 }
+
 @media (max-width: 1200px) {
   .goods__container {
     max-width: 970px;
@@ -172,11 +165,31 @@ h6 {
   .goods__container {
     max-width: 814px;
   }
+  .goods__cards-item:first-child:before {
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 0 8px;
+  }
+  .goods__cards-item:first-child:after {
+
+    left: 100px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 0 8px;
+  }
+
 
 }
 @media (max-width: 767px) {
   .goods__container {
     max-width: none;
+  }
+  .goods__title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 18px;
   }
   .goods__cards {
     display: flex;
@@ -185,4 +198,18 @@ h6 {
   .goods__cards-item {
     width: 100%;
   }
+  .goods__cards-item:first-child:before {
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 16px;
+  }
+  .goods__cards-item:first-child:after {
+    left: 140px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 16px;
+  }
+
 }
