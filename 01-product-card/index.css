@@ -1,0 +1,188 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+  font-family: Arial;
+  background: #e5e5e5;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*btn-classes*/
+.disabled {
+  background: #4e4e4e;
+  color: #ffffff;
+  border: 1px solid #4e4e4e;
+}
+.default {
+  border: 2px solid #42940f;
+  color: #42940f;
+  background: #ffffff;
+}
+/**/
+
+.goods__container {
+  max-width: 1200px;
+  padding: 40px 10px 60px 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.goods__cards {
+  display: flex;
+  gap: 20px;
+
+}
+.goods__cards-item {
+  display: flex;
+  flex-direction: column;
+  width: 33.3333%;
+  background: #ffffff;
+  border-radius: 12px;
+  position: relative;
+}
+.goods__cards-item:first-child:before {
+  content: "НОВИНКА";
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  background: #fdcff3;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0 16px;
+}
+.goods__cards-item:first-child:after {
+  content: "ПОСЛЕДНИЙ";
+  position: absolute;
+  left: 140px;
+  top: 16px;
+  background: #ffcf56;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0 16px;
+}
+.goods__title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 72px;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.cards-item__image-item {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px 12px 0 0;
+}
+.cards-item__content {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  margin-top: 24px;
+}
+.cards-item__content-title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
+  color: #2f2f2f;
+  margin-bottom: 16px;
+}
+.cards-item__content-desc {
+  font-size: 16px;
+  line-height: 24px;
+  color: #2f2f2f;
+  flex: 1 1 auto;
+}
+.cards-item__content-btn {
+  width: 100%;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  height: 48px;
+}
+.cards-item__content-btn:hover {
+  color: #ffffff;
+  background: #42940f;
+}
+
+.cards-item__content-btn:active {
+  background: #1f5200;
+}
+@media (max-width: 1200px) {
+  .goods__container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .goods__container {
+    max-width: 814px;
+  }
+
+}
+@media (max-width: 767px) {
+  .goods__container {
+    max-width: none;
+  }
+  .goods__cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .goods__cards-item {
+    width: 100%;
+  }
+}
