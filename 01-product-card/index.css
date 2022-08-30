@@ -46,12 +46,14 @@ h6 {
 }
 
 /*btn-classes*/
-.disabled {
+[disabled] {
   background: #4e4e4e;
   color: #ffffff;
   border: 1px solid #4e4e4e;
+  cursor: default;
 }
-.default {
+
+.cards-item__content-btn--default {
   border: 2px solid #42940f;
   color: #42940f;
   background: #ffffff;
@@ -69,8 +71,8 @@ h6 {
 .goods__cards {
   display: flex;
   gap: 20px;
-
 }
+
 .goods__cards-item {
   display: flex;
   flex-direction: column;
@@ -79,6 +81,7 @@ h6 {
   border-radius: 12px;
   position: relative;
 }
+
 .goods__cards-item:first-child:before {
   content: "НОВИНКА";
   position: absolute;
@@ -90,6 +93,7 @@ h6 {
   line-height: 24px;
   padding: 0 16px;
 }
+
 .goods__cards-item:first-child:after {
   content: "ПОСЛЕДНИЙ";
   position: absolute;
@@ -101,6 +105,7 @@ h6 {
   line-height: 24px;
   padding: 0 16px;
 }
+
 .goods__title {
   text-align: center;
   font-weight: 900;
@@ -116,6 +121,7 @@ h6 {
   height: 100%;
   border-radius: 12px 12px 0 0;
 }
+
 .cards-item__content {
   padding: 0 24px;
   display: flex;
@@ -123,6 +129,7 @@ h6 {
   flex: 1 1 auto;
   margin-top: 24px;
 }
+
 .cards-item__content-title {
   font-weight: 900;
   font-size: 24px;
@@ -130,12 +137,14 @@ h6 {
   color: #2f2f2f;
   margin-bottom: 16px;
 }
+
 .cards-item__content-desc {
   font-size: 16px;
   line-height: 24px;
   color: #2f2f2f;
   flex: 1 1 auto;
 }
+
 .cards-item__content-btn {
   width: 100%;
   font-weight: 900;
@@ -145,14 +154,15 @@ h6 {
   margin-bottom: 24px;
   margin-top: 24px;
   height: 48px;
+  text-transform: uppercase;
 }
 
-.cards-item__content-btn.default:hover  {
+.cards-item__content-btn--default:hover {
   color: #ffffff;
   background: #42940f;
 }
 
-.cards-item__content-btn.default:active {
+.cards-item__content-btn--default:active {
   background: #1f5200;
 }
 
@@ -161,6 +171,7 @@ h6 {
     max-width: 970px;
   }
 }
+
 @media (max-width: 992px) {
   .goods__container {
     max-width: 814px;
@@ -172,38 +183,41 @@ h6 {
     padding: 0 8px;
   }
   .goods__cards-item:first-child:after {
-
     left: 100px;
     border-radius: 4px;
     font-size: 12px;
     line-height: 15px;
     padding: 0 8px;
   }
-
-
 }
+
 @media (max-width: 767px) {
   .goods__container {
     max-width: none;
   }
+
   .goods__title {
     font-size: 32px;
     line-height: 40px;
     margin-bottom: 18px;
   }
+
   .goods__cards {
     display: flex;
     flex-direction: column;
   }
+
   .goods__cards-item {
     width: 100%;
   }
+
   .goods__cards-item:first-child:before {
     border-radius: 8px;
     font-size: 16px;
     line-height: 24px;
     padding: 0 16px;
   }
+
   .goods__cards-item:first-child:after {
     left: 140px;
     border-radius: 8px;
@@ -211,5 +225,4 @@ h6 {
     line-height: 24px;
     padding: 0 16px;
   }
-
 }
