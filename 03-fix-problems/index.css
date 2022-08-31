@@ -1,3 +1,8 @@
+* {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body,
 html {
   font-family: "Arial Black", sans-serif;
@@ -5,19 +10,17 @@ html {
   background: cornsilk;
 }
 
-* {
-  margin-left: auto;
-  margin-right: auto;
-}
 .article {
   max-width: 680px;
   font-family: sans-serif;
   padding: 24px;
 }
+
 .article__heading {
   margin: 0 0 1.5rem 0;
   color: palevioletred;
 }
+
 .article__lead {
   font-weight: 700;
   text-transform: uppercase;
@@ -25,10 +28,6 @@ html {
   font-family: serif;
   margin-top: 16px;
   margin-bottom: 16px;
-}
-
-.figure__image {
-  transform: translateX(0);
 }
 
 .figure__caption {
